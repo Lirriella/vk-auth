@@ -1,0 +1,1035 @@
+2013/07/05 11:00:37 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "UserIdentity._id".' in Z:\home\plan\www\framework\base\CComponent.php:174
+Stack trace:
+#0 Z:\home\plan\www\protected\components\UserIdentity.php(28): CComponent->__set('_id', '1')
+#1 Z:\home\plan\www\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#2 Z:\home\plan\www\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#3 Z:\home\plan\www\framework\validators\CValidator.php(214): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 Z:\home\plan\www\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#5 Z:\home\plan\www\protected\controllers\SiteController.php(94): CModel->validate()
+#6 Z:\home\plan\www\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#7 Z:\home\plan\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 Z:\home\plan\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 Z:\home\plan\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 Z:\home\plan\www\framework\web\CWebApplication.php(283): CController->run('login')
+#11 Z:\home\plan\www\framework\web\CWebApplication.php(142): CWebApplication->runController('site/login')
+#12 Z:\home\plan\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 Z:\home\plan\www\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://plan/index.php?r=site/login
+---
+2013/07/05 18:48:52 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetch(): SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. Выполнявшийся SQL-запрос: SELECT * FROM `pln_users` `t` WHERE `t`.`login`=:yp0 LIMIT 1.
+in Z:\home\plan\www\protected\components\UserIdentity.php (23)
+in Z:\home\plan\www\protected\models\LoginForm.php (52)
+in Z:\home\plan\www\protected\controllers\SiteController.php (94)
+2013/07/05 18:48:52 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. The SQL statement executed was: SELECT * FROM `pln_users` `t` WHERE `t`.`login`=:yp0 LIMIT 1' in Z:\home\plan\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 Z:\home\plan\www\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1291): CDbCommand->queryRow()
+#2 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1459): CActiveRecord->query(Object(CDbCriteria))
+#3 Z:\home\plan\www\protected\components\UserIdentity.php(23): CActiveRecord->findByAttributes(Array)
+#4 Z:\home\plan\www\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#5 Z:\home\plan\www\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#6 Z:\home\plan\www\framework\validators\CValidator.php(214): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#7 Z:\home\plan\www\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#8 Z:\home\plan\www\protected\controllers\SiteController.php(94): CModel->validate()
+#9 Z:\home\plan\www\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#10 Z:\home\plan\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 Z:\home\plan\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#12 Z:\home\plan\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 Z:\home\plan\www\framework\web\CWebApplication.php(283): CController->run('login')
+#14 Z:\home\plan\www\framework\web\CWebApplication.php(142): CWebApplication->runController('site/login')
+#15 Z:\home\plan\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 Z:\home\plan\www\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://plan/index.php?r=site/login
+---
+2013/07/05 21:29:01 [error] [php] include(CVars.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (Z:\home\plan\www\framework\YiiBase.php:423)
+Stack trace:
+#0 Z:\home\plan\www\protected\views\layouts\main.php(47): spl_autoload_call()
+#1 Z:\home\plan\www\framework\web\CBaseController.php(127): require()
+#2 Z:\home\plan\www\framework\web\CBaseController.php(96): SiteController->renderInternal()
+#3 Z:\home\plan\www\framework\web\widgets\CContentDecorator.php(77): SiteController->renderFile()
+#4 Z:\home\plan\www\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate()
+#5 Z:\home\plan\www\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput()
+#6 Z:\home\plan\www\framework\web\CBaseController.php(207): CContentDecorator->run()
+#7 Z:\home\plan\www\framework\web\CBaseController.php(301): SiteController->endWidget()
+#8 Z:\home\plan\www\protected\views\layouts\column1.php(26): SiteController->endContent()
+#9 Z:\home\plan\www\framework\web\CBaseController.php(127): require()
+#10 Z:\home\plan\www\framework\web\CBaseController.php(96): SiteController->renderInternal()
+#11 Z:\home\plan\www\framework\web\CController.php(785): SiteController->renderFile()
+#12 Z:\home\plan\www\protected\controllers\SiteController.php(99): SiteController->render()
+#13 Z:\home\plan\www\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#14 Z:\home\plan\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#15 Z:\home\plan\www\framework\web\CController.php(287): SiteController->runAction()
+#16 Z:\home\plan\www\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#17 Z:\home\plan\www\framework\web\CWebApplication.php(283): SiteController->run()
+#18 Z:\home\plan\www\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#19 Z:\home\plan\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#20 Z:\home\plan\www\index.php(17): CWebApplication->run()
+REQUEST_URI=/index.php?r=site/login
+in Z:\home\plan\www\protected\views\layouts\main.php (47)
+in Z:\home\plan\www\protected\views\layouts\column1.php (26)
+in Z:\home\plan\www\protected\controllers\SiteController.php (99)
+2013/07/05 22:23:07 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetch(): SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. Выполнявшийся SQL-запрос: SELECT * FROM `pln_users` `t` WHERE `t`.`login`=:yp0 LIMIT 1.
+in Z:\home\plan\www\protected\components\UserIdentity.php (23)
+in Z:\home\plan\www\protected\models\LoginForm.php (49)
+in Z:\home\plan\www\protected\controllers\SiteController.php (95)
+2013/07/05 22:23:07 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. The SQL statement executed was: SELECT * FROM `pln_users` `t` WHERE `t`.`login`=:yp0 LIMIT 1' in Z:\home\plan\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 Z:\home\plan\www\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1291): CDbCommand->queryRow()
+#2 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1459): CActiveRecord->query(Object(CDbCriteria))
+#3 Z:\home\plan\www\protected\components\UserIdentity.php(23): CActiveRecord->findByAttributes(Array)
+#4 Z:\home\plan\www\protected\models\LoginForm.php(49): UserIdentity->authenticate()
+#5 Z:\home\plan\www\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#6 Z:\home\plan\www\framework\validators\CValidator.php(214): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#7 Z:\home\plan\www\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#8 Z:\home\plan\www\protected\controllers\SiteController.php(95): CModel->validate()
+#9 Z:\home\plan\www\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#10 Z:\home\plan\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 Z:\home\plan\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#12 Z:\home\plan\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 Z:\home\plan\www\framework\web\CWebApplication.php(283): CController->run('login')
+#14 Z:\home\plan\www\framework\web\CWebApplication.php(142): CWebApplication->runController('site/login')
+#15 Z:\home\plan\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 Z:\home\plan\www\index.php(17): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://plan/index.php?r=site/login
+---
+2013/07/05 22:29:36 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetch(): SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. Выполнявшийся SQL-запрос: SELECT * FROM `pln_users` `t` WHERE `t`.`login`='����' LIMIT 1.
+in Z:\home\plan\www\protected\components\UserIdentity.php (23)
+in Z:\home\plan\www\protected\models\LoginForm.php (49)
+in Z:\home\plan\www\protected\controllers\SiteController.php (95)
+2013/07/05 22:29:36 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. The SQL statement executed was: SELECT * FROM `pln_users` `t` WHERE `t`.`login`='����' LIMIT 1' in Z:\home\plan\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 Z:\home\plan\www\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1498): CDbCommand->queryRow()
+#2 Z:\home\plan\www\protected\components\UserIdentity.php(23): CActiveRecord->findBySql('SELECT * FROM `...')
+#3 Z:\home\plan\www\protected\models\LoginForm.php(49): UserIdentity->authenticate()
+#4 Z:\home\plan\www\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#5 Z:\home\plan\www\framework\validators\CValidator.php(214): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#6 Z:\home\plan\www\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#7 Z:\home\plan\www\protected\controllers\SiteController.php(95): CModel->validate()
+#8 Z:\home\plan\www\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#9 Z:\home\plan\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 Z:\home\plan\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#11 Z:\home\plan\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 Z:\home\plan\www\framework\web\CWebApplication.php(283): CController->run('login')
+#13 Z:\home\plan\www\framework\web\CWebApplication.php(142): CWebApplication->runController('site/login')
+#14 Z:\home\plan\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 Z:\home\plan\www\index.php(17): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://plan/index.php?r=site/login
+---
+2013/07/05 22:31:46 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetch(): SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. Выполнявшийся SQL-запрос: SELECT * FROM `pln_users` `t` WHERE `t`.`login`='���' LIMIT 1.
+in Z:\home\plan\www\protected\components\UserIdentity.php (23)
+in Z:\home\plan\www\protected\models\LoginForm.php (49)
+in Z:\home\plan\www\protected\controllers\SiteController.php (95)
+2013/07/05 22:31:46 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. The SQL statement executed was: SELECT * FROM `pln_users` `t` WHERE `t`.`login`='���' LIMIT 1' in Z:\home\plan\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 Z:\home\plan\www\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1498): CDbCommand->queryRow()
+#2 Z:\home\plan\www\protected\components\UserIdentity.php(23): CActiveRecord->findBySql('SELECT * FROM `...')
+#3 Z:\home\plan\www\protected\models\LoginForm.php(49): UserIdentity->authenticate()
+#4 Z:\home\plan\www\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#5 Z:\home\plan\www\framework\validators\CValidator.php(214): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#6 Z:\home\plan\www\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#7 Z:\home\plan\www\protected\controllers\SiteController.php(95): CModel->validate()
+#8 Z:\home\plan\www\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#9 Z:\home\plan\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 Z:\home\plan\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#11 Z:\home\plan\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 Z:\home\plan\www\framework\web\CWebApplication.php(283): CController->run('login')
+#13 Z:\home\plan\www\framework\web\CWebApplication.php(142): CWebApplication->runController('site/login')
+#14 Z:\home\plan\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 Z:\home\plan\www\index.php(17): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://plan/index.php?r=site/login
+---
+2013/07/05 22:32:45 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetch(): SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. Выполнявшийся SQL-запрос: SELECT * FROM `pln_users` `t` WHERE `t`.`login`='���' LIMIT 1.
+in Z:\home\plan\www\protected\components\UserIdentity.php (23)
+in Z:\home\plan\www\protected\models\LoginForm.php (49)
+in Z:\home\plan\www\protected\controllers\SiteController.php (95)
+2013/07/05 22:32:45 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. The SQL statement executed was: SELECT * FROM `pln_users` `t` WHERE `t`.`login`='���' LIMIT 1' in Z:\home\plan\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 Z:\home\plan\www\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1498): CDbCommand->queryRow()
+#2 Z:\home\plan\www\protected\components\UserIdentity.php(23): CActiveRecord->findBySql('SELECT * FROM `...')
+#3 Z:\home\plan\www\protected\models\LoginForm.php(49): UserIdentity->authenticate()
+#4 Z:\home\plan\www\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#5 Z:\home\plan\www\framework\validators\CValidator.php(214): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#6 Z:\home\plan\www\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#7 Z:\home\plan\www\protected\controllers\SiteController.php(95): CModel->validate()
+#8 Z:\home\plan\www\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#9 Z:\home\plan\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 Z:\home\plan\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#11 Z:\home\plan\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 Z:\home\plan\www\framework\web\CWebApplication.php(283): CController->run('login')
+#13 Z:\home\plan\www\framework\web\CWebApplication.php(142): CWebApplication->runController('site/login')
+#14 Z:\home\plan\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 Z:\home\plan\www\index.php(17): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://plan/index.php?r=site/login
+---
+2013/07/05 22:32:53 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetch(): SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. Выполнявшийся SQL-запрос: SELECT * FROM `pln_users` `t` WHERE `t`.`login`='���' LIMIT 1.
+in Z:\home\plan\www\protected\components\UserIdentity.php (23)
+in Z:\home\plan\www\protected\models\LoginForm.php (49)
+in Z:\home\plan\www\protected\controllers\SiteController.php (95)
+2013/07/05 22:32:53 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. The SQL statement executed was: SELECT * FROM `pln_users` `t` WHERE `t`.`login`='���' LIMIT 1' in Z:\home\plan\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 Z:\home\plan\www\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1498): CDbCommand->queryRow()
+#2 Z:\home\plan\www\protected\components\UserIdentity.php(23): CActiveRecord->findBySql('SELECT * FROM `...')
+#3 Z:\home\plan\www\protected\models\LoginForm.php(49): UserIdentity->authenticate()
+#4 Z:\home\plan\www\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#5 Z:\home\plan\www\framework\validators\CValidator.php(214): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#6 Z:\home\plan\www\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#7 Z:\home\plan\www\protected\controllers\SiteController.php(95): CModel->validate()
+#8 Z:\home\plan\www\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#9 Z:\home\plan\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 Z:\home\plan\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#11 Z:\home\plan\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 Z:\home\plan\www\framework\web\CWebApplication.php(283): CController->run('login')
+#13 Z:\home\plan\www\framework\web\CWebApplication.php(142): CWebApplication->runController('site/login')
+#14 Z:\home\plan\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 Z:\home\plan\www\index.php(17): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://plan/index.php?r=site/login
+---
+2013/07/05 22:33:00 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetch(): SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. Выполнявшийся SQL-запрос: SELECT * FROM `pln_users` `t` WHERE `t`.`login`='���' LIMIT 1.
+in Z:\home\plan\www\protected\components\UserIdentity.php (23)
+in Z:\home\plan\www\protected\models\LoginForm.php (49)
+in Z:\home\plan\www\protected\controllers\SiteController.php (95)
+2013/07/05 22:33:00 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. The SQL statement executed was: SELECT * FROM `pln_users` `t` WHERE `t`.`login`='���' LIMIT 1' in Z:\home\plan\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 Z:\home\plan\www\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1498): CDbCommand->queryRow()
+#2 Z:\home\plan\www\protected\components\UserIdentity.php(23): CActiveRecord->findBySql('SELECT * FROM `...')
+#3 Z:\home\plan\www\protected\models\LoginForm.php(49): UserIdentity->authenticate()
+#4 Z:\home\plan\www\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#5 Z:\home\plan\www\framework\validators\CValidator.php(214): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#6 Z:\home\plan\www\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#7 Z:\home\plan\www\protected\controllers\SiteController.php(95): CModel->validate()
+#8 Z:\home\plan\www\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#9 Z:\home\plan\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 Z:\home\plan\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#11 Z:\home\plan\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 Z:\home\plan\www\framework\web\CWebApplication.php(283): CController->run('login')
+#13 Z:\home\plan\www\framework\web\CWebApplication.php(142): CWebApplication->runController('site/login')
+#14 Z:\home\plan\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 Z:\home\plan\www\index.php(17): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://plan/index.php?r=site/login
+---
+2013/07/06 15:03:04 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetch(): SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. Выполнявшийся SQL-запрос: SELECT * FROM `pln_users` `t` WHERE `t`.`login`=:yp0 LIMIT 1.
+in Z:\home\plan\www\protected\components\UserIdentity.php (23)
+in Z:\home\plan\www\protected\models\LoginForm.php (50)
+in Z:\home\plan\www\protected\controllers\SiteController.php (95)
+2013/07/06 15:03:04 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. The SQL statement executed was: SELECT * FROM `pln_users` `t` WHERE `t`.`login`=:yp0 LIMIT 1' in Z:\home\plan\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 Z:\home\plan\www\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1291): CDbCommand->queryRow()
+#2 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1459): CActiveRecord->query(Object(CDbCriteria))
+#3 Z:\home\plan\www\protected\components\UserIdentity.php(23): CActiveRecord->findByAttributes(Array)
+#4 Z:\home\plan\www\protected\models\LoginForm.php(50): UserIdentity->authenticate()
+#5 Z:\home\plan\www\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#6 Z:\home\plan\www\framework\validators\CValidator.php(214): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#7 Z:\home\plan\www\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#8 Z:\home\plan\www\protected\controllers\SiteController.php(95): CModel->validate()
+#9 Z:\home\plan\www\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#10 Z:\home\plan\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 Z:\home\plan\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#12 Z:\home\plan\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 Z:\home\plan\www\framework\web\CWebApplication.php(283): CController->run('login')
+#14 Z:\home\plan\www\framework\web\CWebApplication.php(142): CWebApplication->runController('site/login')
+#15 Z:\home\plan\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 Z:\home\plan\www\index.php(17): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://plan/index.php?r=site/login
+---
+2013/07/06 15:05:35 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetch(): SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. Выполнявшийся SQL-запрос: SELECT * FROM `pln_users` `t` WHERE `t`.`login`=:yp0 LIMIT 1.
+in Z:\home\plan\www\protected\components\UserIdentity.php (23)
+in Z:\home\plan\www\protected\models\LoginForm.php (50)
+in Z:\home\plan\www\protected\controllers\SiteController.php (95)
+2013/07/06 15:05:35 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. The SQL statement executed was: SELECT * FROM `pln_users` `t` WHERE `t`.`login`=:yp0 LIMIT 1' in Z:\home\plan\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 Z:\home\plan\www\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1291): CDbCommand->queryRow()
+#2 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1459): CActiveRecord->query(Object(CDbCriteria))
+#3 Z:\home\plan\www\protected\components\UserIdentity.php(23): CActiveRecord->findByAttributes(Array)
+#4 Z:\home\plan\www\protected\models\LoginForm.php(50): UserIdentity->authenticate()
+#5 Z:\home\plan\www\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#6 Z:\home\plan\www\framework\validators\CValidator.php(214): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#7 Z:\home\plan\www\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#8 Z:\home\plan\www\protected\controllers\SiteController.php(95): CModel->validate()
+#9 Z:\home\plan\www\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#10 Z:\home\plan\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 Z:\home\plan\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#12 Z:\home\plan\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 Z:\home\plan\www\framework\web\CWebApplication.php(283): CController->run('login')
+#14 Z:\home\plan\www\framework\web\CWebApplication.php(142): CWebApplication->runController('site/login')
+#15 Z:\home\plan\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 Z:\home\plan\www\index.php(17): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://plan/index.php?r=site/login
+---
+2013/07/06 15:06:16 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetch(): SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. Выполнявшийся SQL-запрос: SELECT * FROM `pln_users` `t` WHERE `t`.`login`=:yp0 LIMIT 1.
+in Z:\home\plan\www\protected\components\UserIdentity.php (23)
+in Z:\home\plan\www\protected\models\LoginForm.php (50)
+in Z:\home\plan\www\protected\controllers\SiteController.php (95)
+2013/07/06 15:06:16 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. The SQL statement executed was: SELECT * FROM `pln_users` `t` WHERE `t`.`login`=:yp0 LIMIT 1' in Z:\home\plan\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 Z:\home\plan\www\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1291): CDbCommand->queryRow()
+#2 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1459): CActiveRecord->query(Object(CDbCriteria))
+#3 Z:\home\plan\www\protected\components\UserIdentity.php(23): CActiveRecord->findByAttributes(Array)
+#4 Z:\home\plan\www\protected\models\LoginForm.php(50): UserIdentity->authenticate()
+#5 Z:\home\plan\www\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#6 Z:\home\plan\www\framework\validators\CValidator.php(214): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#7 Z:\home\plan\www\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#8 Z:\home\plan\www\protected\controllers\SiteController.php(95): CModel->validate()
+#9 Z:\home\plan\www\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#10 Z:\home\plan\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 Z:\home\plan\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#12 Z:\home\plan\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 Z:\home\plan\www\framework\web\CWebApplication.php(283): CController->run('login')
+#14 Z:\home\plan\www\framework\web\CWebApplication.php(142): CWebApplication->runController('site/login')
+#15 Z:\home\plan\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 Z:\home\plan\www\index.php(17): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://plan/index.php?r=site/login
+---
+2013/07/06 15:06:25 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetch(): SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. Выполнявшийся SQL-запрос: SELECT * FROM `pln_users` `t` WHERE `t`.`login`=:yp0 LIMIT 1.
+in Z:\home\plan\www\protected\components\UserIdentity.php (23)
+in Z:\home\plan\www\protected\models\LoginForm.php (50)
+in Z:\home\plan\www\protected\controllers\SiteController.php (95)
+2013/07/06 15:06:25 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. The SQL statement executed was: SELECT * FROM `pln_users` `t` WHERE `t`.`login`=:yp0 LIMIT 1' in Z:\home\plan\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 Z:\home\plan\www\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1291): CDbCommand->queryRow()
+#2 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1459): CActiveRecord->query(Object(CDbCriteria))
+#3 Z:\home\plan\www\protected\components\UserIdentity.php(23): CActiveRecord->findByAttributes(Array)
+#4 Z:\home\plan\www\protected\models\LoginForm.php(50): UserIdentity->authenticate()
+#5 Z:\home\plan\www\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#6 Z:\home\plan\www\framework\validators\CValidator.php(214): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#7 Z:\home\plan\www\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#8 Z:\home\plan\www\protected\controllers\SiteController.php(95): CModel->validate()
+#9 Z:\home\plan\www\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#10 Z:\home\plan\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 Z:\home\plan\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#12 Z:\home\plan\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 Z:\home\plan\www\framework\web\CWebApplication.php(283): CController->run('login')
+#14 Z:\home\plan\www\framework\web\CWebApplication.php(142): CWebApplication->runController('site/login')
+#15 Z:\home\plan\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 Z:\home\plan\www\index.php(17): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://plan/index.php?r=site/login
+---
+2013/07/06 15:06:35 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetch(): SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. Выполнявшийся SQL-запрос: SELECT * FROM `pln_users` `t` WHERE `t`.`login`=:yp0 LIMIT 1.
+in Z:\home\plan\www\protected\components\UserIdentity.php (23)
+in Z:\home\plan\www\protected\models\LoginForm.php (50)
+in Z:\home\plan\www\protected\controllers\SiteController.php (95)
+2013/07/06 15:06:35 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. The SQL statement executed was: SELECT * FROM `pln_users` `t` WHERE `t`.`login`=:yp0 LIMIT 1' in Z:\home\plan\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 Z:\home\plan\www\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1291): CDbCommand->queryRow()
+#2 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1459): CActiveRecord->query(Object(CDbCriteria))
+#3 Z:\home\plan\www\protected\components\UserIdentity.php(23): CActiveRecord->findByAttributes(Array)
+#4 Z:\home\plan\www\protected\models\LoginForm.php(50): UserIdentity->authenticate()
+#5 Z:\home\plan\www\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#6 Z:\home\plan\www\framework\validators\CValidator.php(214): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#7 Z:\home\plan\www\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#8 Z:\home\plan\www\protected\controllers\SiteController.php(95): CModel->validate()
+#9 Z:\home\plan\www\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#10 Z:\home\plan\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 Z:\home\plan\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#12 Z:\home\plan\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 Z:\home\plan\www\framework\web\CWebApplication.php(283): CController->run('login')
+#14 Z:\home\plan\www\framework\web\CWebApplication.php(142): CWebApplication->runController('site/login')
+#15 Z:\home\plan\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 Z:\home\plan\www\index.php(17): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://plan/index.php?r=site/login
+---
+2013/07/06 15:07:03 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetch(): SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. Выполнявшийся SQL-запрос: SELECT * FROM `pln_users` `t` WHERE `t`.`login`=:yp0 LIMIT 1.
+in Z:\home\plan\www\protected\components\UserIdentity.php (23)
+in Z:\home\plan\www\protected\models\LoginForm.php (50)
+in Z:\home\plan\www\protected\controllers\SiteController.php (95)
+2013/07/06 15:07:03 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. The SQL statement executed was: SELECT * FROM `pln_users` `t` WHERE `t`.`login`=:yp0 LIMIT 1' in Z:\home\plan\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 Z:\home\plan\www\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1291): CDbCommand->queryRow()
+#2 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1459): CActiveRecord->query(Object(CDbCriteria))
+#3 Z:\home\plan\www\protected\components\UserIdentity.php(23): CActiveRecord->findByAttributes(Array)
+#4 Z:\home\plan\www\protected\models\LoginForm.php(50): UserIdentity->authenticate()
+#5 Z:\home\plan\www\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#6 Z:\home\plan\www\framework\validators\CValidator.php(214): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#7 Z:\home\plan\www\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#8 Z:\home\plan\www\protected\controllers\SiteController.php(95): CModel->validate()
+#9 Z:\home\plan\www\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#10 Z:\home\plan\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 Z:\home\plan\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#12 Z:\home\plan\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 Z:\home\plan\www\framework\web\CWebApplication.php(283): CController->run('login')
+#14 Z:\home\plan\www\framework\web\CWebApplication.php(142): CWebApplication->runController('site/login')
+#15 Z:\home\plan\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 Z:\home\plan\www\index.php(17): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://plan/index.php?r=site/login
+---
+2013/07/06 15:08:14 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetch(): SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. Выполнявшийся SQL-запрос: SELECT * FROM `pln_users` `t` WHERE `t`.`login`=:yp0 LIMIT 1.
+in Z:\home\plan\www\protected\components\UserIdentity.php (23)
+in Z:\home\plan\www\protected\models\LoginForm.php (50)
+in Z:\home\plan\www\protected\controllers\SiteController.php (95)
+2013/07/06 15:08:14 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. The SQL statement executed was: SELECT * FROM `pln_users` `t` WHERE `t`.`login`=:yp0 LIMIT 1' in Z:\home\plan\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 Z:\home\plan\www\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1291): CDbCommand->queryRow()
+#2 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1459): CActiveRecord->query(Object(CDbCriteria))
+#3 Z:\home\plan\www\protected\components\UserIdentity.php(23): CActiveRecord->findByAttributes(Array)
+#4 Z:\home\plan\www\protected\models\LoginForm.php(50): UserIdentity->authenticate()
+#5 Z:\home\plan\www\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#6 Z:\home\plan\www\framework\validators\CValidator.php(214): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#7 Z:\home\plan\www\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#8 Z:\home\plan\www\protected\controllers\SiteController.php(95): CModel->validate()
+#9 Z:\home\plan\www\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#10 Z:\home\plan\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 Z:\home\plan\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#12 Z:\home\plan\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 Z:\home\plan\www\framework\web\CWebApplication.php(283): CController->run('login')
+#14 Z:\home\plan\www\framework\web\CWebApplication.php(142): CWebApplication->runController('site/login')
+#15 Z:\home\plan\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 Z:\home\plan\www\index.php(17): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://plan/index.php?r=site/login
+---
+2013/07/06 15:27:19 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetch(): SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. Выполнявшийся SQL-запрос: SELECT * FROM `pln_users` `t` WHERE login=:email LIMIT 1.
+in Z:\home\plan\www\protected\components\UserIdentity.php (19)
+in Z:\home\plan\www\protected\models\LoginForm.php (50)
+in Z:\home\plan\www\protected\controllers\SiteController.php (95)
+2013/07/06 15:27:19 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. The SQL statement executed was: SELECT * FROM `pln_users` `t` WHERE login=:email LIMIT 1' in Z:\home\plan\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 Z:\home\plan\www\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1291): CDbCommand->queryRow()
+#2 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1396): CActiveRecord->query(Object(CDbCriteria))
+#3 Z:\home\plan\www\protected\components\UserIdentity.php(19): CActiveRecord->find('login=:email', Array)
+#4 Z:\home\plan\www\protected\models\LoginForm.php(50): UserIdentity->authenticate()
+#5 Z:\home\plan\www\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#6 Z:\home\plan\www\framework\validators\CValidator.php(214): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#7 Z:\home\plan\www\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#8 Z:\home\plan\www\protected\controllers\SiteController.php(95): CModel->validate()
+#9 Z:\home\plan\www\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#10 Z:\home\plan\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 Z:\home\plan\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#12 Z:\home\plan\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 Z:\home\plan\www\framework\web\CWebApplication.php(283): CController->run('login')
+#14 Z:\home\plan\www\framework\web\CWebApplication.php(142): CWebApplication->runController('site/login')
+#15 Z:\home\plan\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 Z:\home\plan\www\index.php(17): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://plan/index.php?r=site/login
+---
+2013/07/06 17:01:45 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetch(): SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. Выполнявшийся SQL-запрос: SELECT * FROM `pln_users` `t` WHERE login=:username LIMIT 1.
+in Z:\home\plan\www\protected\components\UserIdentity.php (21)
+in Z:\home\plan\www\protected\models\LoginForm.php (50)
+in Z:\home\plan\www\protected\controllers\SiteController.php (95)
+2013/07/06 17:01:45 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. The SQL statement executed was: SELECT * FROM `pln_users` `t` WHERE login=:username LIMIT 1' in Z:\home\plan\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 Z:\home\plan\www\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1291): CDbCommand->queryRow()
+#2 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1396): CActiveRecord->query(Object(CDbCriteria))
+#3 Z:\home\plan\www\protected\components\UserIdentity.php(21): CActiveRecord->find('login=:username', Array)
+#4 Z:\home\plan\www\protected\models\LoginForm.php(50): UserIdentity->authenticate()
+#5 Z:\home\plan\www\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#6 Z:\home\plan\www\framework\validators\CValidator.php(214): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#7 Z:\home\plan\www\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#8 Z:\home\plan\www\protected\controllers\SiteController.php(95): CModel->validate()
+#9 Z:\home\plan\www\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#10 Z:\home\plan\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 Z:\home\plan\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#12 Z:\home\plan\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 Z:\home\plan\www\framework\web\CWebApplication.php(283): CController->run('login')
+#14 Z:\home\plan\www\framework\web\CWebApplication.php(142): CWebApplication->runController('site/login')
+#15 Z:\home\plan\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 Z:\home\plan\www\index.php(17): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://plan/index.php?r=site/login
+---
+2013/07/06 17:02:19 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetch(): SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. Выполнявшийся SQL-запрос: SELECT * FROM `pln_users` `t` WHERE login=:username LIMIT 1.
+in Z:\home\plan\www\protected\components\UserIdentity.php (19)
+in Z:\home\plan\www\protected\models\LoginForm.php (50)
+in Z:\home\plan\www\protected\controllers\SiteController.php (95)
+2013/07/06 17:02:19 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. The SQL statement executed was: SELECT * FROM `pln_users` `t` WHERE login=:username LIMIT 1' in Z:\home\plan\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 Z:\home\plan\www\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1291): CDbCommand->queryRow()
+#2 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1396): CActiveRecord->query(Object(CDbCriteria))
+#3 Z:\home\plan\www\protected\components\UserIdentity.php(19): CActiveRecord->find('login=:username', Array)
+#4 Z:\home\plan\www\protected\models\LoginForm.php(50): UserIdentity->authenticate()
+#5 Z:\home\plan\www\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#6 Z:\home\plan\www\framework\validators\CValidator.php(214): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#7 Z:\home\plan\www\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#8 Z:\home\plan\www\protected\controllers\SiteController.php(95): CModel->validate()
+#9 Z:\home\plan\www\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#10 Z:\home\plan\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 Z:\home\plan\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#12 Z:\home\plan\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 Z:\home\plan\www\framework\web\CWebApplication.php(283): CController->run('login')
+#14 Z:\home\plan\www\framework\web\CWebApplication.php(142): CWebApplication->runController('site/login')
+#15 Z:\home\plan\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 Z:\home\plan\www\index.php(17): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://plan/index.php?r=site/login
+---
+2013/07/06 17:16:09 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetch(): SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. Выполнявшийся SQL-запрос: SELECT * FROM `pln_users` `t` WHERE login=:username LIMIT 1.
+in Z:\home\plan\www\protected\components\UserIdentity.php (19)
+in Z:\home\plan\www\protected\models\LoginForm.php (50)
+in Z:\home\plan\www\protected\controllers\SiteController.php (95)
+2013/07/06 17:16:09 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. The SQL statement executed was: SELECT * FROM `pln_users` `t` WHERE login=:username LIMIT 1' in Z:\home\plan\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 Z:\home\plan\www\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1291): CDbCommand->queryRow()
+#2 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1396): CActiveRecord->query(Object(CDbCriteria))
+#3 Z:\home\plan\www\protected\components\UserIdentity.php(19): CActiveRecord->find('login=:username', Array)
+#4 Z:\home\plan\www\protected\models\LoginForm.php(50): UserIdentity->authenticate()
+#5 Z:\home\plan\www\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#6 Z:\home\plan\www\framework\validators\CValidator.php(214): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#7 Z:\home\plan\www\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#8 Z:\home\plan\www\protected\controllers\SiteController.php(95): CModel->validate()
+#9 Z:\home\plan\www\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#10 Z:\home\plan\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 Z:\home\plan\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#12 Z:\home\plan\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 Z:\home\plan\www\framework\web\CWebApplication.php(283): CController->run('login')
+#14 Z:\home\plan\www\framework\web\CWebApplication.php(142): CWebApplication->runController('site/login')
+#15 Z:\home\plan\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 Z:\home\plan\www\index.php(17): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://plan/index.php?r=site/login
+---
+2013/07/06 17:24:18 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetch(): SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. Выполнявшийся SQL-запрос: SELECT * FROM `pln_users` `t` WHERE login=:username LIMIT 1.
+in Z:\home\plan\www\protected\components\UserIdentity.php (19)
+in Z:\home\plan\www\protected\models\LoginForm.php (50)
+in Z:\home\plan\www\protected\controllers\SiteController.php (95)
+2013/07/06 17:24:18 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. The SQL statement executed was: SELECT * FROM `pln_users` `t` WHERE login=:username LIMIT 1' in Z:\home\plan\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 Z:\home\plan\www\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1291): CDbCommand->queryRow()
+#2 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1396): CActiveRecord->query(Object(CDbCriteria))
+#3 Z:\home\plan\www\protected\components\UserIdentity.php(19): CActiveRecord->find('login=:username', Array)
+#4 Z:\home\plan\www\protected\models\LoginForm.php(50): UserIdentity->authenticate()
+#5 Z:\home\plan\www\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#6 Z:\home\plan\www\framework\validators\CValidator.php(214): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#7 Z:\home\plan\www\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#8 Z:\home\plan\www\protected\controllers\SiteController.php(95): CModel->validate()
+#9 Z:\home\plan\www\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#10 Z:\home\plan\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 Z:\home\plan\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#12 Z:\home\plan\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 Z:\home\plan\www\framework\web\CWebApplication.php(283): CController->run('login')
+#14 Z:\home\plan\www\framework\web\CWebApplication.php(142): CWebApplication->runController('site/login')
+#15 Z:\home\plan\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 Z:\home\plan\www\index.php(17): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://plan/index.php?r=site/login
+---
+2013/07/06 17:25:16 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetch(): SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. Выполнявшийся SQL-запрос: SELECT * FROM `pln_users` `t` WHERE login=:username LIMIT 1.
+in Z:\home\plan\www\protected\components\UserIdentity.php (19)
+in Z:\home\plan\www\protected\models\LoginForm.php (50)
+in Z:\home\plan\www\protected\controllers\SiteController.php (95)
+2013/07/06 17:25:16 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. The SQL statement executed was: SELECT * FROM `pln_users` `t` WHERE login=:username LIMIT 1' in Z:\home\plan\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 Z:\home\plan\www\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1291): CDbCommand->queryRow()
+#2 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1396): CActiveRecord->query(Object(CDbCriteria))
+#3 Z:\home\plan\www\protected\components\UserIdentity.php(19): CActiveRecord->find('login=:username', Array)
+#4 Z:\home\plan\www\protected\models\LoginForm.php(50): UserIdentity->authenticate()
+#5 Z:\home\plan\www\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#6 Z:\home\plan\www\framework\validators\CValidator.php(214): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#7 Z:\home\plan\www\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#8 Z:\home\plan\www\protected\controllers\SiteController.php(95): CModel->validate()
+#9 Z:\home\plan\www\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#10 Z:\home\plan\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 Z:\home\plan\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#12 Z:\home\plan\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 Z:\home\plan\www\framework\web\CWebApplication.php(283): CController->run('login')
+#14 Z:\home\plan\www\framework\web\CWebApplication.php(142): CWebApplication->runController('site/login')
+#15 Z:\home\plan\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 Z:\home\plan\www\index.php(17): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://plan/index.php?r=site/login
+---
+2013/07/06 17:26:30 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetch(): SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. Выполнявшийся SQL-запрос: SELECT * FROM `pln_users` `t` WHERE login=:username LIMIT 1.
+in Z:\home\plan\www\protected\components\UserIdentity.php (19)
+in Z:\home\plan\www\protected\models\LoginForm.php (50)
+in Z:\home\plan\www\protected\controllers\SiteController.php (95)
+2013/07/06 17:26:31 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. The SQL statement executed was: SELECT * FROM `pln_users` `t` WHERE login=:username LIMIT 1' in Z:\home\plan\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 Z:\home\plan\www\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1291): CDbCommand->queryRow()
+#2 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1396): CActiveRecord->query(Object(CDbCriteria))
+#3 Z:\home\plan\www\protected\components\UserIdentity.php(19): CActiveRecord->find('login=:username', Array)
+#4 Z:\home\plan\www\protected\models\LoginForm.php(50): UserIdentity->authenticate()
+#5 Z:\home\plan\www\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#6 Z:\home\plan\www\framework\validators\CValidator.php(214): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#7 Z:\home\plan\www\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#8 Z:\home\plan\www\protected\controllers\SiteController.php(95): CModel->validate()
+#9 Z:\home\plan\www\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#10 Z:\home\plan\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 Z:\home\plan\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#12 Z:\home\plan\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 Z:\home\plan\www\framework\web\CWebApplication.php(283): CController->run('login')
+#14 Z:\home\plan\www\framework\web\CWebApplication.php(142): CWebApplication->runController('site/login')
+#15 Z:\home\plan\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 Z:\home\plan\www\index.php(17): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://plan/index.php?r=site/login
+---
+2013/07/06 17:31:30 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetch(): SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. Выполнявшийся SQL-запрос: SELECT * FROM `pln_users` `t` WHERE login=:username LIMIT 1.
+in Z:\home\plan\www\protected\components\UserIdentity.php (20)
+in Z:\home\plan\www\protected\models\LoginForm.php (50)
+in Z:\home\plan\www\protected\controllers\SiteController.php (95)
+2013/07/06 17:31:30 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. The SQL statement executed was: SELECT * FROM `pln_users` `t` WHERE login=:username LIMIT 1' in Z:\home\plan\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 Z:\home\plan\www\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1291): CDbCommand->queryRow()
+#2 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1396): CActiveRecord->query(Object(CDbCriteria))
+#3 Z:\home\plan\www\protected\components\UserIdentity.php(20): CActiveRecord->find('login=:username', Array)
+#4 Z:\home\plan\www\protected\models\LoginForm.php(50): UserIdentity->authenticate()
+#5 Z:\home\plan\www\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#6 Z:\home\plan\www\framework\validators\CValidator.php(214): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#7 Z:\home\plan\www\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#8 Z:\home\plan\www\protected\controllers\SiteController.php(95): CModel->validate()
+#9 Z:\home\plan\www\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#10 Z:\home\plan\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 Z:\home\plan\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#12 Z:\home\plan\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 Z:\home\plan\www\framework\web\CWebApplication.php(283): CController->run('login')
+#14 Z:\home\plan\www\framework\web\CWebApplication.php(142): CWebApplication->runController('site/login')
+#15 Z:\home\plan\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 Z:\home\plan\www\index.php(17): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://plan/index.php?r=site/login
+---
+2013/07/06 17:32:27 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetch(): SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. Выполнявшийся SQL-запрос: SELECT * FROM `pln_users` `t` WHERE login=:username LIMIT 1.
+in Z:\home\plan\www\protected\components\UserIdentity.php (20)
+in Z:\home\plan\www\protected\models\LoginForm.php (50)
+in Z:\home\plan\www\protected\controllers\SiteController.php (95)
+2013/07/06 17:32:27 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. The SQL statement executed was: SELECT * FROM `pln_users` `t` WHERE login=:username LIMIT 1' in Z:\home\plan\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 Z:\home\plan\www\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1291): CDbCommand->queryRow()
+#2 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1396): CActiveRecord->query(Object(CDbCriteria))
+#3 Z:\home\plan\www\protected\components\UserIdentity.php(20): CActiveRecord->find('login=:username', Array)
+#4 Z:\home\plan\www\protected\models\LoginForm.php(50): UserIdentity->authenticate()
+#5 Z:\home\plan\www\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#6 Z:\home\plan\www\framework\validators\CValidator.php(214): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#7 Z:\home\plan\www\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#8 Z:\home\plan\www\protected\controllers\SiteController.php(95): CModel->validate()
+#9 Z:\home\plan\www\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#10 Z:\home\plan\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 Z:\home\plan\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#12 Z:\home\plan\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 Z:\home\plan\www\framework\web\CWebApplication.php(283): CController->run('login')
+#14 Z:\home\plan\www\framework\web\CWebApplication.php(142): CWebApplication->runController('site/login')
+#15 Z:\home\plan\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 Z:\home\plan\www\index.php(17): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://plan/index.php?r=site/login
+---
+2013/07/06 17:34:38 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetch(): SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. Выполнявшийся SQL-запрос: SELECT * FROM `pln_users` `t` WHERE login=:username LIMIT 1.
+in Z:\home\plan\www\protected\components\UserIdentity.php (20)
+in Z:\home\plan\www\protected\models\LoginForm.php (50)
+in Z:\home\plan\www\protected\controllers\SiteController.php (95)
+2013/07/06 17:34:38 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. The SQL statement executed was: SELECT * FROM `pln_users` `t` WHERE login=:username LIMIT 1' in Z:\home\plan\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 Z:\home\plan\www\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1291): CDbCommand->queryRow()
+#2 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1396): CActiveRecord->query(Object(CDbCriteria))
+#3 Z:\home\plan\www\protected\components\UserIdentity.php(20): CActiveRecord->find('login=:username', Array)
+#4 Z:\home\plan\www\protected\models\LoginForm.php(50): UserIdentity->authenticate()
+#5 Z:\home\plan\www\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#6 Z:\home\plan\www\framework\validators\CValidator.php(214): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#7 Z:\home\plan\www\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#8 Z:\home\plan\www\protected\controllers\SiteController.php(95): CModel->validate()
+#9 Z:\home\plan\www\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#10 Z:\home\plan\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 Z:\home\plan\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#12 Z:\home\plan\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 Z:\home\plan\www\framework\web\CWebApplication.php(283): CController->run('login')
+#14 Z:\home\plan\www\framework\web\CWebApplication.php(142): CWebApplication->runController('site/login')
+#15 Z:\home\plan\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 Z:\home\plan\www\index.php(17): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://plan/index.php?r=site/login
+---
+2013/07/06 17:36:10 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetch(): SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. Выполнявшийся SQL-запрос: SELECT * FROM `pln_users` `t` WHERE login=:username LIMIT 1.
+in Z:\home\plan\www\protected\components\UserIdentity.php (20)
+in Z:\home\plan\www\protected\models\LoginForm.php (50)
+in Z:\home\plan\www\protected\controllers\SiteController.php (95)
+2013/07/06 17:36:10 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. The SQL statement executed was: SELECT * FROM `pln_users` `t` WHERE login=:username LIMIT 1' in Z:\home\plan\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 Z:\home\plan\www\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1291): CDbCommand->queryRow()
+#2 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1396): CActiveRecord->query(Object(CDbCriteria))
+#3 Z:\home\plan\www\protected\components\UserIdentity.php(20): CActiveRecord->find('login=:username', Array)
+#4 Z:\home\plan\www\protected\models\LoginForm.php(50): UserIdentity->authenticate()
+#5 Z:\home\plan\www\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#6 Z:\home\plan\www\framework\validators\CValidator.php(214): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#7 Z:\home\plan\www\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#8 Z:\home\plan\www\protected\controllers\SiteController.php(95): CModel->validate()
+#9 Z:\home\plan\www\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#10 Z:\home\plan\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 Z:\home\plan\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#12 Z:\home\plan\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 Z:\home\plan\www\framework\web\CWebApplication.php(283): CController->run('login')
+#14 Z:\home\plan\www\framework\web\CWebApplication.php(142): CWebApplication->runController('site/login')
+#15 Z:\home\plan\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 Z:\home\plan\www\index.php(17): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://plan/index.php?r=site/login
+---
+2013/07/06 17:37:26 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetch(): SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. Выполнявшийся SQL-запрос: SELECT * FROM `pln_users` `t` WHERE login=:username LIMIT 1.
+in Z:\home\plan\www\protected\components\UserIdentity.php (20)
+in Z:\home\plan\www\protected\models\LoginForm.php (50)
+in Z:\home\plan\www\protected\controllers\SiteController.php (95)
+2013/07/06 17:37:26 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. The SQL statement executed was: SELECT * FROM `pln_users` `t` WHERE login=:username LIMIT 1' in Z:\home\plan\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 Z:\home\plan\www\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1291): CDbCommand->queryRow()
+#2 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1396): CActiveRecord->query(Object(CDbCriteria))
+#3 Z:\home\plan\www\protected\components\UserIdentity.php(20): CActiveRecord->find('login=:username', Array)
+#4 Z:\home\plan\www\protected\models\LoginForm.php(50): UserIdentity->authenticate()
+#5 Z:\home\plan\www\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#6 Z:\home\plan\www\framework\validators\CValidator.php(214): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#7 Z:\home\plan\www\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#8 Z:\home\plan\www\protected\controllers\SiteController.php(95): CModel->validate()
+#9 Z:\home\plan\www\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#10 Z:\home\plan\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 Z:\home\plan\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#12 Z:\home\plan\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 Z:\home\plan\www\framework\web\CWebApplication.php(283): CController->run('login')
+#14 Z:\home\plan\www\framework\web\CWebApplication.php(142): CWebApplication->runController('site/login')
+#15 Z:\home\plan\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 Z:\home\plan\www\index.php(17): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://plan/index.php?r=site/login
+---
+2013/07/06 17:38:34 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetch(): SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. Выполнявшийся SQL-запрос: SELECT * FROM `pln_users` `t` WHERE login=:username LIMIT 1.
+in Z:\home\plan\www\protected\components\UserIdentity.php (20)
+in Z:\home\plan\www\protected\models\LoginForm.php (50)
+in Z:\home\plan\www\protected\controllers\SiteController.php (95)
+2013/07/06 17:38:34 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. The SQL statement executed was: SELECT * FROM `pln_users` `t` WHERE login=:username LIMIT 1' in Z:\home\plan\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 Z:\home\plan\www\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1291): CDbCommand->queryRow()
+#2 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1396): CActiveRecord->query(Object(CDbCriteria))
+#3 Z:\home\plan\www\protected\components\UserIdentity.php(20): CActiveRecord->find('login=:username', Array)
+#4 Z:\home\plan\www\protected\models\LoginForm.php(50): UserIdentity->authenticate()
+#5 Z:\home\plan\www\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#6 Z:\home\plan\www\framework\validators\CValidator.php(214): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#7 Z:\home\plan\www\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#8 Z:\home\plan\www\protected\controllers\SiteController.php(95): CModel->validate()
+#9 Z:\home\plan\www\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#10 Z:\home\plan\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 Z:\home\plan\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#12 Z:\home\plan\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 Z:\home\plan\www\framework\web\CWebApplication.php(283): CController->run('login')
+#14 Z:\home\plan\www\framework\web\CWebApplication.php(142): CWebApplication->runController('site/login')
+#15 Z:\home\plan\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 Z:\home\plan\www\index.php(17): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://plan/index.php?r=site/login
+---
+2013/07/06 17:39:42 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetch(): SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. Выполнявшийся SQL-запрос: SELECT * FROM `pln_users` `t` WHERE login=:username LIMIT 1.
+in Z:\home\plan\www\protected\components\UserIdentity.php (20)
+in Z:\home\plan\www\protected\models\LoginForm.php (50)
+in Z:\home\plan\www\protected\controllers\SiteController.php (95)
+2013/07/06 17:39:42 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. The SQL statement executed was: SELECT * FROM `pln_users` `t` WHERE login=:username LIMIT 1' in Z:\home\plan\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 Z:\home\plan\www\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1291): CDbCommand->queryRow()
+#2 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1396): CActiveRecord->query(Object(CDbCriteria))
+#3 Z:\home\plan\www\protected\components\UserIdentity.php(20): CActiveRecord->find('login=:username', Array)
+#4 Z:\home\plan\www\protected\models\LoginForm.php(50): UserIdentity->authenticate()
+#5 Z:\home\plan\www\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#6 Z:\home\plan\www\framework\validators\CValidator.php(214): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#7 Z:\home\plan\www\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#8 Z:\home\plan\www\protected\controllers\SiteController.php(95): CModel->validate()
+#9 Z:\home\plan\www\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#10 Z:\home\plan\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 Z:\home\plan\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#12 Z:\home\plan\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 Z:\home\plan\www\framework\web\CWebApplication.php(283): CController->run('login')
+#14 Z:\home\plan\www\framework\web\CWebApplication.php(142): CWebApplication->runController('site/login')
+#15 Z:\home\plan\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 Z:\home\plan\www\index.php(17): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://plan/index.php?r=site/login
+---
+2013/07/06 17:39:51 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetch(): SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. Выполнявшийся SQL-запрос: SELECT * FROM `pln_users` `t` WHERE login=:username LIMIT 1.
+in Z:\home\plan\www\protected\components\UserIdentity.php (20)
+in Z:\home\plan\www\protected\models\LoginForm.php (50)
+in Z:\home\plan\www\protected\controllers\SiteController.php (95)
+2013/07/06 17:39:51 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. The SQL statement executed was: SELECT * FROM `pln_users` `t` WHERE login=:username LIMIT 1' in Z:\home\plan\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 Z:\home\plan\www\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1291): CDbCommand->queryRow()
+#2 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1396): CActiveRecord->query(Object(CDbCriteria))
+#3 Z:\home\plan\www\protected\components\UserIdentity.php(20): CActiveRecord->find('login=:username', Array)
+#4 Z:\home\plan\www\protected\models\LoginForm.php(50): UserIdentity->authenticate()
+#5 Z:\home\plan\www\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#6 Z:\home\plan\www\framework\validators\CValidator.php(214): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#7 Z:\home\plan\www\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#8 Z:\home\plan\www\protected\controllers\SiteController.php(95): CModel->validate()
+#9 Z:\home\plan\www\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#10 Z:\home\plan\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 Z:\home\plan\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#12 Z:\home\plan\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 Z:\home\plan\www\framework\web\CWebApplication.php(283): CController->run('login')
+#14 Z:\home\plan\www\framework\web\CWebApplication.php(142): CWebApplication->runController('site/login')
+#15 Z:\home\plan\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 Z:\home\plan\www\index.php(17): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://plan/index.php?r=site/login
+---
+2013/07/06 17:40:25 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetch(): SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. Выполнявшийся SQL-запрос: SELECT * FROM `pln_users` `t` WHERE login=:username LIMIT 1.
+in Z:\home\plan\www\protected\components\UserIdentity.php (20)
+in Z:\home\plan\www\protected\models\LoginForm.php (63)
+in Z:\home\plan\www\protected\controllers\SiteController.php (95)
+2013/07/06 17:40:25 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. The SQL statement executed was: SELECT * FROM `pln_users` `t` WHERE login=:username LIMIT 1' in Z:\home\plan\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 Z:\home\plan\www\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1291): CDbCommand->queryRow()
+#2 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1396): CActiveRecord->query(Object(CDbCriteria))
+#3 Z:\home\plan\www\protected\components\UserIdentity.php(20): CActiveRecord->find('login=:username', Array)
+#4 Z:\home\plan\www\protected\models\LoginForm.php(63): UserIdentity->authenticate()
+#5 Z:\home\plan\www\protected\controllers\SiteController.php(95): LoginForm->login()
+#6 Z:\home\plan\www\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#7 Z:\home\plan\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 Z:\home\plan\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 Z:\home\plan\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 Z:\home\plan\www\framework\web\CWebApplication.php(283): CController->run('login')
+#11 Z:\home\plan\www\framework\web\CWebApplication.php(142): CWebApplication->runController('site/login')
+#12 Z:\home\plan\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 Z:\home\plan\www\index.php(17): CApplication->run()
+#14 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://plan/index.php?r=site/login
+---
+2013/07/06 17:42:18 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetch(): SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. Выполнявшийся SQL-запрос: SELECT * FROM `pln_users` `t` WHERE login=:username LIMIT 1.
+in Z:\home\plan\www\protected\components\UserIdentity.php (20)
+in Z:\home\plan\www\protected\models\LoginForm.php (63)
+in Z:\home\plan\www\protected\controllers\SiteController.php (95)
+2013/07/06 17:42:18 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. The SQL statement executed was: SELECT * FROM `pln_users` `t` WHERE login=:username LIMIT 1' in Z:\home\plan\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 Z:\home\plan\www\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1291): CDbCommand->queryRow()
+#2 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1396): CActiveRecord->query(Object(CDbCriteria))
+#3 Z:\home\plan\www\protected\components\UserIdentity.php(20): CActiveRecord->find('login=:username', Array)
+#4 Z:\home\plan\www\protected\models\LoginForm.php(63): UserIdentity->authenticate()
+#5 Z:\home\plan\www\protected\controllers\SiteController.php(95): LoginForm->login()
+#6 Z:\home\plan\www\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#7 Z:\home\plan\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 Z:\home\plan\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 Z:\home\plan\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 Z:\home\plan\www\framework\web\CWebApplication.php(283): CController->run('login')
+#11 Z:\home\plan\www\framework\web\CWebApplication.php(142): CWebApplication->runController('site/login')
+#12 Z:\home\plan\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 Z:\home\plan\www\index.php(17): CApplication->run()
+#14 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://plan/index.php?r=site/login
+---
+2013/07/06 17:56:05 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetch(): SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. Выполнявшийся SQL-запрос: SELECT * FROM `pln_users` `t` WHERE login=:username LIMIT 1.
+in Z:\home\plan\www\protected\components\UserIdentity.php (20)
+in Z:\home\plan\www\protected\models\LoginForm.php (62)
+in Z:\home\plan\www\protected\controllers\SiteController.php (95)
+2013/07/06 17:56:05 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. The SQL statement executed was: SELECT * FROM `pln_users` `t` WHERE login=:username LIMIT 1' in Z:\home\plan\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 Z:\home\plan\www\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1291): CDbCommand->queryRow()
+#2 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1396): CActiveRecord->query(Object(CDbCriteria))
+#3 Z:\home\plan\www\protected\components\UserIdentity.php(20): CActiveRecord->find('login=:username', Array)
+#4 Z:\home\plan\www\protected\models\LoginForm.php(62): UserIdentity->authenticate()
+#5 Z:\home\plan\www\protected\controllers\SiteController.php(95): LoginForm->login()
+#6 Z:\home\plan\www\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#7 Z:\home\plan\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 Z:\home\plan\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 Z:\home\plan\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 Z:\home\plan\www\framework\web\CWebApplication.php(283): CController->run('login')
+#11 Z:\home\plan\www\framework\web\CWebApplication.php(142): CWebApplication->runController('site/login')
+#12 Z:\home\plan\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 Z:\home\plan\www\index.php(17): CApplication->run()
+#14 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://plan/index.php?r=site/login
+---
+2013/07/06 17:57:28 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetch(): SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. Выполнявшийся SQL-запрос: SELECT * FROM `pln_users` `t` WHERE login=:username LIMIT 1.
+in Z:\home\plan\www\protected\components\UserIdentity.php (20)
+in Z:\home\plan\www\protected\models\LoginForm.php (62)
+in Z:\home\plan\www\protected\controllers\SiteController.php (95)
+2013/07/06 17:57:28 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. The SQL statement executed was: SELECT * FROM `pln_users` `t` WHERE login=:username LIMIT 1' in Z:\home\plan\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 Z:\home\plan\www\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1291): CDbCommand->queryRow()
+#2 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1396): CActiveRecord->query(Object(CDbCriteria))
+#3 Z:\home\plan\www\protected\components\UserIdentity.php(20): CActiveRecord->find('login=:username', Array)
+#4 Z:\home\plan\www\protected\models\LoginForm.php(62): UserIdentity->authenticate()
+#5 Z:\home\plan\www\protected\controllers\SiteController.php(95): LoginForm->login()
+#6 Z:\home\plan\www\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#7 Z:\home\plan\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 Z:\home\plan\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 Z:\home\plan\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 Z:\home\plan\www\framework\web\CWebApplication.php(283): CController->run('login')
+#11 Z:\home\plan\www\framework\web\CWebApplication.php(142): CWebApplication->runController('site/login')
+#12 Z:\home\plan\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 Z:\home\plan\www\index.php(17): CApplication->run()
+#14 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://plan/index.php?r=site/login
+---
+2013/07/06 17:58:01 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetch(): SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. Выполнявшийся SQL-запрос: SELECT * FROM `pln_users` `t` WHERE login=:username LIMIT 1.
+in Z:\home\plan\www\protected\components\UserIdentity.php (20)
+in Z:\home\plan\www\protected\models\LoginForm.php (62)
+in Z:\home\plan\www\protected\controllers\SiteController.php (95)
+2013/07/06 17:58:01 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. The SQL statement executed was: SELECT * FROM `pln_users` `t` WHERE login=:username LIMIT 1' in Z:\home\plan\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 Z:\home\plan\www\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1291): CDbCommand->queryRow()
+#2 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1396): CActiveRecord->query(Object(CDbCriteria))
+#3 Z:\home\plan\www\protected\components\UserIdentity.php(20): CActiveRecord->find('login=:username', Array)
+#4 Z:\home\plan\www\protected\models\LoginForm.php(62): UserIdentity->authenticate()
+#5 Z:\home\plan\www\protected\controllers\SiteController.php(95): LoginForm->login()
+#6 Z:\home\plan\www\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#7 Z:\home\plan\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 Z:\home\plan\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 Z:\home\plan\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 Z:\home\plan\www\framework\web\CWebApplication.php(283): CController->run('login')
+#11 Z:\home\plan\www\framework\web\CWebApplication.php(142): CWebApplication->runController('site/login')
+#12 Z:\home\plan\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 Z:\home\plan\www\index.php(17): CApplication->run()
+#14 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://plan/index.php?r=site/login
+---
+2013/07/06 17:59:20 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetch(): SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. Выполнявшийся SQL-запрос: SELECT * FROM `pln_users` `t` WHERE login=:username LIMIT 1.
+in Z:\home\plan\www\protected\components\UserIdentity.php (20)
+in Z:\home\plan\www\protected\models\LoginForm.php (62)
+in Z:\home\plan\www\protected\controllers\SiteController.php (95)
+2013/07/06 17:59:20 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. The SQL statement executed was: SELECT * FROM `pln_users` `t` WHERE login=:username LIMIT 1' in Z:\home\plan\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 Z:\home\plan\www\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1291): CDbCommand->queryRow()
+#2 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1396): CActiveRecord->query(Object(CDbCriteria))
+#3 Z:\home\plan\www\protected\components\UserIdentity.php(20): CActiveRecord->find('login=:username', Array)
+#4 Z:\home\plan\www\protected\models\LoginForm.php(62): UserIdentity->authenticate()
+#5 Z:\home\plan\www\protected\controllers\SiteController.php(95): LoginForm->login()
+#6 Z:\home\plan\www\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#7 Z:\home\plan\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 Z:\home\plan\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 Z:\home\plan\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 Z:\home\plan\www\framework\web\CWebApplication.php(283): CController->run('login')
+#11 Z:\home\plan\www\framework\web\CWebApplication.php(142): CWebApplication->runController('site/login')
+#12 Z:\home\plan\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 Z:\home\plan\www\index.php(17): CApplication->run()
+#14 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://plan/index.php?r=site/login
+---
+2013/07/06 18:03:16 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetch(): SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. Выполнявшийся SQL-запрос: SELECT * FROM `pln_users` `t` WHERE login=:username LIMIT 1.
+in Z:\home\plan\www\protected\components\UserIdentity.php (20)
+in Z:\home\plan\www\protected\models\LoginForm.php (62)
+in Z:\home\plan\www\protected\controllers\SiteController.php (95)
+2013/07/06 18:03:16 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (cp1251_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='. The SQL statement executed was: SELECT * FROM `pln_users` `t` WHERE login=:username LIMIT 1' in Z:\home\plan\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 Z:\home\plan\www\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1291): CDbCommand->queryRow()
+#2 Z:\home\plan\www\framework\db\ar\CActiveRecord.php(1396): CActiveRecord->query(Object(CDbCriteria))
+#3 Z:\home\plan\www\protected\components\UserIdentity.php(20): CActiveRecord->find('login=:username', Array)
+#4 Z:\home\plan\www\protected\models\LoginForm.php(62): UserIdentity->authenticate()
+#5 Z:\home\plan\www\protected\controllers\SiteController.php(95): LoginForm->login()
+#6 Z:\home\plan\www\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#7 Z:\home\plan\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 Z:\home\plan\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 Z:\home\plan\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 Z:\home\plan\www\framework\web\CWebApplication.php(283): CController->run('login')
+#11 Z:\home\plan\www\framework\web\CWebApplication.php(142): CWebApplication->runController('site/login')
+#12 Z:\home\plan\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 Z:\home\plan\www\index.php(17): CApplication->run()
+#14 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://plan/index.php?r=site/login
+---
+2013/07/07 12:30:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "create".' in Z:\home\plan\www\framework\web\CController.php:484
+Stack trace:
+#0 Z:\home\plan\www\framework\web\CController.php(271): CController->missingAction('create')
+#1 Z:\home\plan\www\framework\web\CWebApplication.php(283): CController->run('create')
+#2 Z:\home\plan\www\framework\web\CWebApplication.php(142): CWebApplication->runController('user/create')
+#3 Z:\home\plan\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 Z:\home\plan\www\index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=user/create
+---
+2013/07/07 12:31:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "create".' in Z:\home\plan\www\framework\web\CController.php:484
+Stack trace:
+#0 Z:\home\plan\www\framework\web\CController.php(271): CController->missingAction('create')
+#1 Z:\home\plan\www\framework\web\CWebApplication.php(283): CController->run('create')
+#2 Z:\home\plan\www\framework\web\CWebApplication.php(142): CWebApplication->runController('user/create')
+#3 Z:\home\plan\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 Z:\home\plan\www\index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=user/create
+---
+2015/03/18 18:17:16 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchAll(): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'auth.pln_users' doesn't exist. Выполнявшийся SQL-запрос: SHOW COLUMNS FROM `pln_users`.
+in /var/www/test/protected/models/User.php (27)
+in /var/www/test/protected/models/User.php (191)
+in /var/www/test/protected/models/User.php (182)
+2015/03/18 18:17:16 [error] [exception.CDbException] exception 'CDbException' with message 'Таблица "{{users}}", упомянутая в записи active record класса "User", не найдена в базе данных.' in /var/www/test/framework/db/ar/CActiveRecord.php:2312
+Stack trace:
+#0 /var/www/test/framework/db/ar/CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(User))
+#1 /var/www/test/protected/models/User.php(27): CActiveRecord::model('User')
+#2 /var/www/test/protected/models/User.php(191): User::model()
+#3 /var/www/test/protected/models/User.php(182): User::getCurrentUser()
+#4 /var/www/test/protected/controllers/SiteController.php(33): User::getCurrentUserDefaultPage()
+#5 /var/www/test/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#6 /var/www/test/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /var/www/test/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /var/www/test/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /var/www/test/framework/web/CWebApplication.php(283): CController->run('')
+#10 /var/www/test/framework/web/CWebApplication.php(142): CWebApplication->runController('')
+#11 /var/www/test/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /var/www/test/index.php(17): CApplication->run()
+#13 {main}
+REQUEST_URI=/index.php
+---

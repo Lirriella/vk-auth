@@ -1,0 +1,140 @@
+.page-container
+{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	background: white;
+	border: 1px solid #C9E0ED;
+	padding:20px;
+}
+
+.header
+{
+	margin: 0 0 10px 0;
+	padding: 0;
+}
+
+.sidebar
+{
+	padding: 20px 20px 20px 20px;
+}
+
+.footer
+{
+	padding: 10px 0;
+	margin:10px 0 0 0;
+	font-size: 0.8em;
+	text-align: center;
+	border-top: 1px solid #C9E0ED;
+}
+
+.logo
+{
+	padding: 10px 0px;
+	font-size: 200%;
+	float:left;
+}
+
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input
+{
+    width:100%;
+    box-sizing: border-box; 
+   -moz-box-sizing: border-box; /*Fierfox*/
+   -webkit-box-sizing: border-box; /*gog\saf*/
+    margin:0;
+    margin-bottom: 3px;
+    margin-right: 3px;
+    height:30px;
+}
+
+.row
+{
+    margin:0;
+}
+
+.main-row
+{
+    margin-left:-20px;
+}
+
+.clear 
+{
+    clear:both;
+}
+
+img
+{
+    max-width: inherit;
+}
+
+.profile-controls
+{
+    float:right;
+}
+
+.table tr.selected td
+{
+    background-color:lightblue !important;
+}
+
+.width-inherit
+{
+    width:inherit;
+}
+
+.summary{
+    
+    display: none;
+}
+
+.w100
+{
+    width:100%;
+}
+
+table.valign-top td
+{
+    vertical-align: top;
+}
+
+.progress
+{
+    vertical-align: middle;
+    margin-bottom:0;
+}
+
+.profile-content > div
+{
+    width:50%;
+    float:left;
+}
+
+.button-column
+{
+    width:36px;
+}
+
+.pagination ul > .selected > a, 
+.pagination ul > .selected > span 
+{
+color: #999;
+cursor: default;
+}
+
+.pagination ul > li > a:hover, 
+.pagination ul > .selected > a, 
+.pagination ul > .selected > span 
+{
+background-color: whiteSmoke;
+}
+
+.main-title
+{
+font-size:20pt;
+padding: 5px 0 20px 0;
+}
+
+.navbar-inner
+{
+  padding-left:2px;
+  padding-right:2px;
+}
